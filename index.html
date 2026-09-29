@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageRank Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">⚡ PageRank Academy</div>
+
+  <div class="stats">
+    <span>⭐ <b id="xp">0</b> XP</span>
+    <span>🏅 <b id="achievements">0</b></span>
+  </div>
+</header>
+
+<main>
+
+  <!-- INTRO -->
+  <section id="intro" class="screen active">
+    <div class="hero">
+      <div class="badge">GOOGLE'S WEB RANKING MYSTERY</div>
+
+      <h1>Become a<br><span>PageRank Master</span></h1>
+
+      <p>
+        The web has billions of pages.
+        How could a search engine decide which pages deserve attention?
+      </p>
+
+      <p>
+        Your mission is to discover the answer by playing.
+      </p>
+
+      <button class="primary" onclick="startGame()">
+        START MISSION →
+      </button>
+    </div>
+  </section>
+
+
+  <!-- LEVEL SELECT -->
+  <section id="levels" class="screen">
+
+    <div class="section-heading">
+      <div>
+        <div class="badge">MISSION CONTROL</div>
+        <h2>Your Journey</h2>
+      </div>
+
+      <div class="xp-box">
+        <span>⭐</span>
+        <strong id="levelXP">0 XP</strong>
+      </div>
+    </div>
+
+    <div id="levelGrid" class="level-grid"></div>
+
+  </section>
+
+
+  <!-- GAME AREA -->
+  <section id="game" class="screen">
+
+    <div class="game-header">
+
+      <button class="back-button" onclick="showLevels()">
+        ← Levels
+      </button>
+
+      <div>
+        <div id="levelNumber" class="badge"></div>
+        <h2 id="levelTitle"></h2>
+      </div>
+
+      <div class="progress-wrap">
+        <span id="progressText">Round 1</span>
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="gameContent"></div>
+
+  </section>
+
+
+  <!-- REWARD -->
+  <section id="reward" class="screen">
+
+    <div class="reward-card">
+
+      <div class="reward-icon" id="rewardIcon">✨</div>
+
+      <div class="badge">REWARD UNLOCKED</div>
+
+      <h1 id="rewardTitle">Discovery!</h1>
+
+      <p id="rewardText"></p>
+
+      <div class="xp-reward">
+        +<span id="rewardXP">100</span> XP
+      </div>
+
+      <div class="achievement">
+        <div id="achievementIcon">🏅</div>
+
+        <div>
+          <small>ACHIEVEMENT</small>
+          <strong id="achievementName"></strong>
+        </div>
+      </div>
+
+      <div class="unlock">
+        🔓 <span id="unlockText"></span>
+      </div>
+
+      <button class="primary" onclick="continueAfterReward()">
+        CLAIM REWARD →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+  <section id="final" class="screen">
+
+    <div class="final-card">
+
+      <div class="big-trophy">🏆</div>
+
+      <div class="badge">MISSION COMPLETE</div>
+
+      <h1>PageRank<br><span>Master</span></h1>
+
+      <p>
+        You discovered how links, importance, random surfers,
+        damping and ranking manipulation fit together.
+      </p>
+
+      <div class="final-score">
+        <span>FINAL XP</span>
+        <strong id="finalXP">0</strong>
+      </div>
+
+      <div id="finalAchievements" class="final-achievements"></div>
+
+      <button class="primary" onclick="showLevels()">
+        PLAY AGAIN
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
